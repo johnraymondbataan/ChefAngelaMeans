@@ -1,0 +1,1189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chef Angela Means - Actress • Author • Chef</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: 'TAN Pearl';
+            src: url('https://fonts.cdnfonts.com/css/tan-pearl') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        body {
+            font-family: 'Quicksand', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .tan-pearl {
+            font-family: 'TAN Pearl', serif;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #3B060A 0%, #8A0000 50%, #C83F12 100%);
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(59, 6, 10, 0.9) 0%, rgba(138, 0, 0, 0.8) 50%, rgba(200, 63, 18, 0.7) 100%);
+        }
+        
+        .section-gradient {
+            background: linear-gradient(135deg, rgba(255, 242, 135, 0.1) 0%, rgba(200, 63, 18, 0.1) 50%, rgba(59, 6, 10, 0.1) 100%);
+        }
+        
+        .book-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .product-card:hover {
+            transform: scale(1.03);
+        }
+        
+        .testimonial-card {
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .gallery-item {
+            transition: all 0.3s ease;
+        }
+        
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #FFF287;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+       .profile-border {
+            display: inline-block;
+            padding: 5px; /* Border thickness */
+            border-radius: 50%;
+            background: linear-gradient(45deg, #3B060A, #8A0000, #C83F12, #FFF287);
+        }
+
+        .profile-image {
+            display: block;
+            width: 200px; /* Adjust as needed */
+            height: 200px; /* Adjust as needed */
+            object-fit: cover;
+            border-radius: 50%;
+            background-color: #fff; /* Optional: white inner background behind the image */
+        }
+        
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            animation: fadeIn 0.3s ease;
+        }
+        
+        .modal-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 90%;
+            max-height: 90%;
+            animation: zoomIn 0.3s ease;
+        }
+        
+        .modal-image {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+        }
+        
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: #fff;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        
+        .close:hover {
+            color: #FFF287;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes zoomIn {
+            from { transform: translate(-50%, -50%) scale(0.7); }
+            to { transform: translate(-50%, -50%) scale(1); }
+        }
+        
+        /* Typewriter Animation */
+        .typewriter-animation {
+            display: inline-block;
+            overflow: hidden;
+            border-right: 3px solid #FFF287;
+            white-space: nowrap;
+            letter-spacing: 0.05em;
+            animation: typing 4s steps(17, end) forwards, blink-caret 1s step-end infinite;
+            max-width: 0;
+        }
+        
+        @keyframes typing {
+            from { max-width: 0; }
+            to { max-width: 100%; }
+        }
+        
+        @keyframes blink-caret {
+            from, to { border-color: transparent; }
+            50% { border-color: #FFF287; }
+        }
+        
+        /* Responsive adjustments for typewriter */
+        @media (max-width: 768px) {
+            .typewriter-animation {
+                animation: typing 3s steps(17, end) forwards, blink-caret 1s step-end infinite;
+            }
+        }
+
+        @keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+    </style>
+</head>
+<body class="bg-gray-100">
+    <!-- Navigation -->
+    <nav class="fixed w-full gradient-bg text-white z-50 shadow-lg">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <a href="#" class="tan-pearl text-2xl md:text-3xl font-bold">chefangelameans</a>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link text-white hover:text-yellow-300 transition duration-300">Home</a>
+                    <a href="#about" class="nav-link text-white hover:text-yellow-300 transition duration-300">About</a>
+                    <a href="#books" class="nav-link text-white hover:text-yellow-300 transition duration-300">Books</a>
+                    <a href="#products" class="nav-link text-white hover:text-yellow-300 transition duration-300">Products</a>
+                    <a href="#testimonials" class="nav-link text-white hover:text-yellow-300 transition duration-300">Testimonials</a>
+                    <a href="#contact" class="nav-link text-white hover:text-yellow-300 transition duration-300">Contact</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-white focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-4 px-4">
+                <div class="flex flex-col space-y-4 text-center">
+                    <a href="#home" class="flex justify-center items-center text-black hover:text-gray-600 transition duration-300 space-x-2">
+                        <i class="fas fa-home"></i>
+                        <span>Home</span>
+                    </a>
+                    <a href="#about" class="flex justify-center items-center text-black hover:text-gray-600 transition duration-300 space-x-2">
+                        <i class="fas fa-user"></i>
+                        <span>About</span>
+                    </a>
+                    <a href="#books" class="flex justify-center items-center text-black hover:text-gray-600 transition duration-300 space-x-2">
+                        <i class="fas fa-book"></i>
+                        <span>Books</span>
+                    </a>
+                    <a href="#contact" class="flex justify-center items-center text-black hover:text-gray-600 transition duration-300 space-x-2">
+                        <i class="fas fa-envelope"></i>
+                        <span>Contact</span>
+                    </a>
+                </div>
+            </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden">
+        <div class="absolute inset-0 bg-[url('Images/mini.png')] bg-cover bg-center hero-gradient"></div>
+        <div class="container mx-auto px-4 z-10 text-center text-white py-24">
+            <h1 class="tan-pearl text-4xl md:text-9xl lg:text-7xl font-bold mb-4 typewriter-animation">Chef Angela Means</h1>
+            <p class="text-xl md:text-2xl mb-8 font-medium font-bold">Actress • Author • Chef • Creator of Stories & Flavors</p>
+            <p class="max-w-2xl mx-auto text-lg md:text-xl font-semibold mb-8 ">Memorable roles in FRIDAY and Cousin Skeeter. Author of children's and horror books. Curator of lifestyle finds.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#books" class="bg-[#C83F12] hover:bg-[#8A0000] text-white font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105 shadow-lg">Shop My Books</a>
+                <a href="#products" class="bg-[#FFF287] hover:bg-[#FFE55C] text-[#3B060A] font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105 shadow-lg">Discover My Finds</a>
+            </div>
+        </div>
+    </section>
+
+   <!-- About Section -->
+    <section id="about" class="py-20 section-gradient">
+        <div class="container mx-auto px-4">
+            <!-- Enhanced About Section Header -->
+            <div class="text-center mb-16">
+                <div class="relative inline-block">
+                    <h2 class="tan-pearl text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-[#3B060A] via-[#8A0000] to-[#C83F12] bg-clip-text text-transparent mb-4">
+                        "Who is Angela Means"
+                    </h2>
+                    <!-- Decorative underlines -->
+                    <div class="flex justify-center space-x-2 mb-3">
+                        <div class="h-1 w-16 bg-gradient-to-r from-[#3B060A] to-[#8A0000] rounded-full"></div>
+                        <div class="h-1 w-8 bg-gradient-to-r from-[#8A0000] to-[#C83F12] rounded-full"></div>
+                        <div class="h-1 w-16 bg-gradient-to-r from-[#C83F12] to-[#3B060A] rounded-full"></div>
+                    </div>
+                </div>
+                <p class="text-lg text-gray-600 italic max-w-2xl mx-auto">
+                    "From Hollywood screens to literary dreams and culinary scenes"
+                </p>
+            </div>
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+               <div class="lg:w-1/3 flex justify-center">
+                    <div class="p-1">
+                        <img src="https://scontent.fmnl35-1.fna.fbcdn.net/v/t1.15752-9/515192890_701238342815084_8120381003033330885_n.png?_nc_cat=110&ccb=1-7&_nc_sid=0024fc&_nc_ohc=jLcp1eNiEuMQ7kNvwG3wESW&_nc_oc=AdlW38x9A-R4kdXv2pNRAkng96Kg4wtJARO_vG8J3vuAqgCiUtYrJQxsN9wd3YjNGRI&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fmnl35-1.fna&oh=03_Q7cD2wHygsLzQ5ykITB-yH5EInrE_-KqhpqOKi_egbO8fZrXBQ&oe=688F60CF" alt="Angela Means" class="w-64 h-64 md:w-80 md:h-80 object-cover animate-float">
+                    </div>
+                </div>
+                <div class="lg:w-2/3 text-justify">
+                    <h3 class="tan-pearl text-center font-semibold text-2xl md:text-3xl mb-6 text-[#8A0000]">From Screen to Page to Kitchen</h3>
+                    <p class="text-lg mb-6 text-gray-700">You may know me from my memorable roles in cult classic films like <span class="font-semibold">FRIDAY</span> or from my work on the beloved children's show <span class="font-semibold">Cousin Skeeter</span>. But my creative journey has taken me far beyond acting.</p>
+                    <p class="text-lg mb-6 text-gray-700">As an author, I've channeled my love for storytelling into both whimsical children's books that spark young imaginations and chilling horror novels that keep readers up at night. Each genre allows me to explore different facets of the human experience.</p>
+                    <p class="text-lg mb-6 text-gray-700">In the kitchen, I bring the same passion and creativity to my culinary creations. Food, like storytelling, is about connection, tradition, and innovation. Whether I'm developing a new recipe or writing my next book, I'm always seeking to create experiences that resonate deeply.</p>
+                   <div class="flex flex-col sm:flex-row sm:space-x-4 space-y-3 sm:space-y-0 text-lg text-gray-700 justify-center items-center mt-6">
+                    <!-- Instagram Button -->
+                    <a href="https://www.instagram.com/chefangelameans" target="_blank" class="inline-flex items-center space-x-2 bg-gradient-to-tr from-[#8A0000] to-[#C83F12] text-white px-4 py-2 rounded-full hover:scale-105 transition">
+                        <i class="fab fa-instagram text-xl"></i>
+                        <span>Follow me on Instagram</span>
+                    </a>
+
+                    <!-- Amazon Button -->
+                    <a href="https://www.amazon.com/shop/chefangelameans" target="_blank" class="inline-flex items-center space-x-2 bg-gradient-to-tr from-[#3B060A] to-[#8A0000] text-white px-4 py-2 rounded-full hover:scale-105 transition">
+                        <i class="fab fa-amazon text-xl"></i>
+                        <span>Click to view more</span>
+                    </a>
+
+                </div>
+                </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Books Section -->
+    <section id="books" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <!-- Enhanced Section Header -->
+            <div class="text-center mb-8">
+                <div class="inline-block relative">
+                    <h2 class="tan-pearl text-4xl md:text-5xl lg:text-6xl font-bold text-[#3B060A] relative z-10">
+                        <span class="bg-gradient-to-r from-[#3B060A] via-[#8A0000] to-[#C83F12] bg-clip-text text-transparent">The Angela Means Books Collection</span>
+                    </h2>
+                    <div class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-[#FFF287] to-[#C83F12] rounded-full"></div>
+                    <div class="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-16 h-0.5 bg-[#FFF287]/60 rounded-full"></div>
+                </div>
+                <p class="text-[#3B060A]/70 text-lg md:text-xl mt-6 font-medium italic">"Stories that captivate, inspire, and transform"</p>
+            </div>
+            
+            <!-- Enhanced Interactive Instructions -->
+            <div class="max-w-4xl mx-auto mb-12">
+                <div class="bg-gradient-to-r from-[#FFF287]/20 to-[#C83F12]/20 rounded-2xl p-6 border-2 border-[#FFF287]/30 shadow-lg">
+                    <div class="text-center">
+                        <div class="flex flex-col md:flex-row justify-center items-center gap-6 text-[#3B060A]">
+                            <div class="flex items-center gap-3 bg-white/70 rounded-full px-6 py-3 shadow-md hover:shadow-lg transition-all duration-300">
+                                <span class="text-2xl animate-pulse">👆</span>
+                                <span class="font-semibold text-lg">Click images for preview</span>
+                            </div>
+                            <div class="flex items-center gap-3 bg-white/70 rounded-full px-6 py-3 shadow-md hover:shadow-lg transition-all duration-300">
+                                <span class="text-2xl animate-bounce">⬇️</span>
+                                <span class="font-semibold text-lg">Tap arrows for descriptions</span>
+                            </div>
+                        </div>
+                        <p class="text-[#3B060A]/80 mt-4 text-lg italic">"Each book is a journey waiting to unfold..."</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Children's Books -->
+            <div class="mb-20">
+                <!-- Enhanced Children's Books Header -->
+                <div class="text-center mb-12">
+                    <div class="inline-block relative">
+                        <h3 class="tan-pearl text-2xl md:text-2xl lg:text-5xl font-bold relative z-10">
+                            <span class="bg-gradient-to-r from-[#8A0000] via-[#C83F12] to-[#8A0000] bg-clip-text text-transparent">Children's Books</span>
+                        </h3>
+                        <div class="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-20 h-0.5 bg-gradient-to-r from-[#FFF287] to-[#C83F12] rounded-full"></div>
+                        <div class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-12 h-0.5 bg-[#FFF287]/50 rounded-full"></div>
+                    </div>
+                    <p class="text-[#8A0000]/70 text-base md:text-lg mt-4 font-medium italic">"Nurturing young minds through magical storytelling"</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-2 max-w-4xl mx-auto">
+
+                    <!-- Book 1 -->
+                    <div id="card-book1" class="book-card bg-gradient-to-tr from-[#C83F12] to-[#FFF287] rounded-xl overflow-hidden shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-500 p-6 flex flex-col items-center border-2 border-transparent">
+                                <!-- Book Image -->
+                                <img src="https://m.media-amazon.com/images/I/41wnTyV5RXL._SX342_SY445_.jpg" alt="Children's Book 1"
+                                    class="max-w-[180px] max-h-[260px] object-contain hover:scale-105 hover:opacity-90 transition-all duration-300 cursor-pointer mb-4"
+                                    onclick="openModal('https://m.media-amazon.com/images/I/51t76HZAR3L._AC_CR0%2C0%2C0%2C0_SX480_SY360_.jpg', 'Children\'s Book 1')">
+                                
+                                <!-- Book Info -->
+                                <div class="text-center">
+                                    <h4 class="tan-pearl text-lg font-bold mb-3 text-black">"Benny and His Best Friend, the Sun"</h4>
+                                    
+                                    <!-- Toggle Button -->
+                                    <button onclick="toggleDescription('book1')" class="mb-3 p-2 rounded-full hover:bg-gray-100 transition-colors duration-200">
+                                        <svg id="arrow-book1" class="w-6 h-6 text-black transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                        </svg>
+                                    </button>
+                                    
+                                    <div id="description-book1" class="hidden">
+                                        <p class="text-black mb-4 text-justify text-sm leading-relaxed">
+                                            Benny the bunny starts each day with a smile—because his best friend, the Sun, is always there to greet him! But what happens when Benny wakes up one morning and the Sun is nowhere to be found?
+                                        </p>
+                                        <!-- Buy Button -->
+                                        <a href="https://www.amazon.com/Benny-Bunny-Friend-Friends-Collection/dp/B0FDFC2GL8?ref_=ast_author_dp&th=1&psc=1" class="inline-block bg-[#FFF287] hover:bg-[#FFE55C] text-[#3B060A] font-bold py-3 px-8 rounded-full transition-all duration-300 hover:scale-105 shadow-md hover:shadow-lg">
+                                            Buy Now
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                    <!-- Book 2 -->
+                    <div id="card-book2" class="book-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-500 p-6 flex flex-col items-center border-2 border-transparent">
+                                <!-- Book Image -->
+                                <img src="https://m.media-amazon.com/images/I/61004s52QnL._AC_CR0%2C0%2C0%2C0_SX480_SY360_.jpg" alt="Children's Book 2"
+                                    class="max-w-[180px] max-h-[260px] object-contain hover:scale-105 hover:opacity-90 transition-all duration-300 cursor-pointer mb-4"
+                                    onclick="openModal('https://m.media-amazon.com/images/I/61J2MSxfENL._AC_CR0%2C0%2C0%2C0_SX480_SY360_.jpg', 'Children\'s Book 2')">
+                                
+                                <!-- Book Info -->
+                                <div class="text-center">
+                                    <h4 class="tan-pearl text-lg font-bold mb-3 text-[#8A0000]">"My ABC Coloring Booklet"</h4>
+                                    
+                                    <!-- Toggle Button -->
+                                    <button onclick="toggleDescription('book2')" class="mb-3 p-2 rounded-full hover:bg-gray-100 transition-colors duration-200">
+                                        <svg id="arrow-book2" class="w-6 h-6 text-[#8A0000] transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                        </svg>
+                                    </button>
+                                    
+                                    <div id="description-book2" class="hidden">
+                                        <p class="text-black mb-4 text-justify text-sm leading-relaxed">
+                                            My ABC Coloring Booklet is the perfect early learning companion for preschoolers and kindergarteners! This charming alphabet coloring book features three fun and familiar words for every letter of the alphabet
+                                        </p>
+                                        <!-- Buy Button -->
+                                        <a href="https://www.amazon.com/ABC-Coloring-Booklet-KiddyColor-Co/dp/B0FDKCCZYF?ref_=ast_author_dp&th=1&psc=1" class="inline-block bg-[#FFF287] hover:bg-[#FFE55C] text-[#3B060A] font-bold py-3 px-8 rounded-full transition-all duration-300 hover:scale-105 shadow-md hover:shadow-lg">
+                                            Buy Now
+                                        </a>
+                                    </div>
+                                </div>
+                        </div>
+
+                
+                <!-- Book 3 -->
+                    <div id="card-book3" class="book-card bg-gradient-to-tr from-[#C83F12] to-[#FFF287] rounded-xl overflow-hidden shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-500 p-6 flex flex-col items-center border-2 border-transparent">
+                                <!-- Book Image -->
+                                <img src="https://m.media-amazon.com/images/I/71r0aRXAB+L._AC_CR0%2C0%2C0%2C0_SX480_SY360_.jpg" alt="Children's Book 3"
+                                    class="max-w-[180px] max-h-[260px] object-contain hover:scale-105 hover:opacity-90 transition-all duration-300 cursor-pointer mb-4"
+                                    onclick="openModal('https://m.media-amazon.com/images/I/618WSYvpr2L._AC_CR0%2C0%2C0%2C0_SX480_SY360_.jpg', 'Children\'s Book 3')">
+                                
+                                <!-- Book Info -->
+                                <div class="text-center">
+                                    <h4 class="tan-pearl text-lg font-bold mb-3 text-black">"I Am a Lufengosaurus"</h4>
+                                    
+                                    <!-- Toggle Button -->
+                                    <button onclick="toggleDescription('book3')" class="mb-3 p-2 rounded-full hover:bg-gray-100 transition-colors duration-200">
+                                        <svg id="arrow-book3" class="w-6 h-6 text-black transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                        </svg>
+                                    </button>
+                                    
+                                    <div id="description-book3" class="hidden">
+                                        <p class="text-black mb-4 text-justify text-sm leading-relaxed">
+                                            Step back in time and stomp into adventure with "I Am a Lufengosaurus"—an exciting dinosaur coloring book packed with prehistoric fun! Meet 30 amazing dinosaurs from the towering Tyrannosaurus rex
+                                        </p>
+                                        <!-- Buy Button -->
+                                        <a href="https://www.amazon.com/Am-Lufengosaurus-Dinosaur-Coloring-KiddyColor/dp/B0FDJYSC7W?ref_=ast_author_dp&th=1&psc=1" class="inline-block bg-[#FFF287] hover:bg-[#FFE55C] text-[#3B060A] font-bold py-3 px-8 rounded-full transition-all duration-300 hover:scale-105 shadow-md hover:shadow-lg">
+                                            Buy Now
+                                        </a>
+                                    </div>
+                                </div>
+                        </div>
+
+                
+                    <!-- Book 4 -->
+                    <div id="card-book4" class="book-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-500 p-6 flex flex-col items-center border-2 border-transparent">
+                                <!-- Book Image -->
+                                <img src="https://m.media-amazon.com/images/I/61OkQa4fH+L._AC_CR0%2C0%2C0%2C0_SX480_SY360_.jpg" alt="Children's Book 4"
+                                    class="max-w-[180px] max-h-[260px] object-contain hover:scale-105 hover:opacity-90 transition-all duration-300 cursor-pointer mb-4"
+                                    onclick="openModal('https://m.media-amazon.com/images/I/51Ky-jtKPJL._AC_CR0%2C0%2C0%2C0_SX480_SY360_.jpg', 'Children\'s Book 4')">
+                                
+                                <!-- Book Info -->
+                                <div class="text-center">
+                                    <h4 class="tan-pearl text-lg font-bold mb-3 text-[#8A0000] ">"My ABC Coloring Booklet"</h4>
+                                    
+                                    <!-- Toggle Button -->
+                                    <button onclick="toggleDescription('book4')" class="mb-3 p-2 rounded-full hover:bg-gray-100 transition-colors duration-200">
+                                        <svg id="arrow-book4" class="w-6 h-6 text-[#8A0000] transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                        </svg>
+                                    </button>
+                                    
+                                    <div id="description-book4" class="hidden">
+                                        <p class="text-black mb-4 text-justify text-sm leading-relaxed">
+                                           My ABC Coloring Booklet is the perfect early learning companion for preschoolers and kindergarteners! This charming alphabet coloring book features three fun and familiar words for every letter of the alphabet
+                                        </p>
+                                        <!-- Buy Button -->
+                                        <a href="https://www.amazon.com/My-ABC-Coloring-Booklet-KiddyColor/dp/B0FD9WX51L?ref_=ast_author_dp&th=1&psc=1" class="inline-block bg-[#FFF287] hover:bg-[#FFE55C] text-[#3B060A] font-bold py-3 px-8 rounded-full transition-all duration-300 hover:scale-105 shadow-md hover:shadow-lg">
+                                            Buy Now
+                                        </a>
+                                    </div>
+                                </div>
+                        </div>
+
+                    <!-- Book 5 -->
+                    <div id="card-book5" class="book-card bg-gradient-to-tr from-[#C83F12] to-[#FFF287] rounded-xl overflow-hidden shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-500 p-6 flex flex-col items-center border-2 border-transparent">
+                                <!-- Book Image -->
+                                <img src="https://m.media-amazon.com/images/I/616wixZFkDL._AC_CR0%2C0%2C0%2C0_SX480_SY360_.jpg" alt="Children's Book 5"
+                                    class="max-w-[180px] max-h-[260px] object-contain hover:scale-105 hover:opacity-90 transition-all duration-300 cursor-pointer mb-4"
+                                    onclick="openModal('https://m.media-amazon.com/images/I/51edg9WqFWL._AC_CR0%2C0%2C0%2C0_SX480_SY360_.jpg', 'Children\'s Book 5')">
+                                
+                                <!-- Book Info -->
+                                <div class="text-center">
+                                    <h4 class="tan-pearl text-lg font-bold mb-3 text-black ">"Magical Unicorn Coloring Book"</h4>
+                                    
+                                    <!-- Toggle Button -->
+                                    <button onclick="toggleDescription('book5')" class="mb-3 p-2 rounded-full hover:bg-gray-100 transition-colors duration-200">
+                                        <svg id="arrow-book5" class="w-6 h-6 text-black transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                        </svg>
+                                    </button>
+                                    
+                                    <div id="description-book5" class="hidden">
+                                        <p class="text-black mb-4 text-justify text-sm leading-relaxed">
+                                            Step into a sparkling world of imagination with the Magical Unicorn Coloring Book! Packed with over 30 delightful illustrations of unicorns, rainbows, and positive messages, this enchanting book is perfect for children ages 4–8 who love creativity, color, and a little bit of magic.
+                                        </p>
+                                        <!-- Buy Button -->
+                                        <a href="https://www.amazon.com/Magical-Unicorn-Coloring-Book-KiddyColor/dp/B0FD9DN9FN?ref_=ast_author_dp&th=1&psc=1" class="inline-block bg-[#FFF287] hover:bg-[#FFE55C] text-[#3B060A] font-bold py-3 px-8 rounded-full transition-all duration-300 hover:scale-105 shadow-md hover:shadow-lg">
+                                            Buy Now
+                                        </a>
+                                    </div>
+                                </div>
+                        </div>
+
+                    <!-- Book 6 -->
+                    <div id="card-book6" class="book-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-500 p-6 flex flex-col items-center border-2 border-transparent">
+                                <!-- Book Image -->
+                                <img src="https://m.media-amazon.com/images/I/51jS-WKWTyL._AC_CR0%2C0%2C0%2C0_SX480_SY360_.jpg" alt="Children's Book 6"
+                                    class="max-w-[180px] max-h-[260px] object-contain hover:scale-105 hover:opacity-90 transition-all duration-300 cursor-pointer mb-4"
+                                    onclick="openModal('https://m.media-amazon.com/images/I/419YPmawycL._AC_CR0%2C0%2C0%2C0_SX480_SY360_.jpg', 'Children\'s Book 6')">
+                                
+                                <!-- Book Info -->
+                                <div class="text-center">
+                                    <h4 class="tan-pearl text-lg font-bold mb-3 text-[#8A0000] ">10 Minute Gratitude & Coloring Journal "</h4>
+                                    
+                                    <!-- Toggle Button -->
+                                    <button onclick="toggleDescription('book6')" class="mb-3 p-2 rounded-full hover:bg-gray-100 transition-colors duration-200">
+                                        <svg id="arrow-book6" class="w-6 h-6 text-[#8A0000] transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                        </svg>
+                                    </button>
+                                    
+                                    <div id="description-book6" class="hidden">
+                                        <p class="text-black mb-4 text-justify text-sm leading-relaxed">
+                                           Transform your daily routine with the 10 Minute Gratitude & Coloring Journal—a beautiful space for reflection, mindfulness, and creativity. Designed to help you cultivate a positive mindset in just minutes a day, this journal includes guided prompts to spark gratitude and inner calm. 
+                                        </p>
+                                        <!-- Buy Button -->
+                                        <a href="https://www.amazon.com/10-Minute-Gratitude-Coloring-Journal/dp/B0FD2VZNC1?ref_=ast_author_dp&dib=eyJ2IjoiMSJ9.TIS3Z19CKp0mzo07Ljbv0l8KnPTKSqaZdwfH3SaCu0xqTQZjUynl__G3jRlG5XtWROF05IH41z-f1xNJS_W-Yz8V7gmprxPrA4WU887SDXe-DoqiZHh_0giwNTDynQxt4baeH_-ZxxNfxaMp4uBjAU5kNLZ4gFVlop32Mm_V6RU4X-6gznwDZPOv5gSoCxiUQbByvOjN3mplqIhItkcjORndSWZoZmAKYunItNu7ijE.HAovG9INy-nwHYdVt2ln9QdbYZgcOJSvQbywHArGA2g&dib_tag=AUTHOR" class="inline-block bg-[#FFF287] hover:bg-[#FFE55C] text-[#3B060A] font-bold py-3 px-8 rounded-full transition-all duration-300 hover:scale-105 shadow-md hover:shadow-lg">
+                                            Buy Now
+                                        </a>
+                                    </div>
+                                </div>
+                        </div>
+
+                    <!-- Book 7 -->
+                    <div id="card-book7" class="book-card bg-gradient-to-tr from-[#C83F12] to-[#FFF287] rounded-xl overflow-hidden shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-500 p-6 flex flex-col items-center border-2 border-transparent">
+                                <!-- Book Image -->
+                                <img src="https://m.media-amazon.com/images/I/71LchOFTv6L._AC_CR0%2C0%2C0%2C0_SX480_SY360_.jpg" alt="Children's Book 7"
+                                    class="max-w-[180px] max-h-[260px] object-contain hover:scale-105 hover:opacity-90 transition-all duration-300 cursor-pointer mb-4"
+                                    onclick="openModal('https://m.media-amazon.com/images/I/61pPnyFLsBL._AC_CR0%2C0%2C0%2C0_SX480_SY360_.jpg', 'Children\'s Book 7')">
+                                
+                                <!-- Book Info -->
+                                <div class="text-center">
+                                    <h4 class="tan-pearl text-lg font-bold mb-3 text-black ">"Goldilocks and the Three Bears' Smart Devices"</h4>
+                                    
+                                    <!-- Toggle Button -->
+                                    <button onclick="toggleDescription('book7')" class="mb-3 p-2 rounded-full hover:bg-gray-100 transition-colors duration-200">
+                                        <svg id="arrow-book7" class="w-6 h-6 text-black transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                        </svg>
+                                    </button>
+                                    
+                                    <div id="description-book7" class="hidden">
+                                        <p class="text-black mb-4 text-justify text-sm leading-relaxed">
+                                           Step into the digital age with a timeless tale—reimagined for today’s tech-savvy kids! In this charming and educational storybook, Goldilocks and the Three Bears return in a fun, modern twist where smart devices and cyber safety take center stage. When Goldilocks stumbles into the Bears’ high-tech home, 
+                                        </p>
+                                        <!-- Buy Button -->
+                                        <a href="https://www.amazon.com/Goldilocks-Three-Bears-Smart-Devices/dp/B0FCD8MT3Y?ref_=ast_author_dp&th=1&psc=1" class="inline-block bg-[#FFF287] hover:bg-[#FFE55C] text-[#3B060A] font-bold py-3 px-8 rounded-full transition-all duration-300 hover:scale-105 shadow-md hover:shadow-lg">
+                                            Buy Now
+                                        </a>
+                                    </div>
+                                </div>
+                        </div>
+
+                    <!-- Book 8 -->
+                    <div id="card-book8" class="book-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-500 p-6 flex flex-col items-center border-2 border-transparent">
+                                <!-- Book Image -->
+                                <img src="https://m.media-amazon.com/images/I/6131UcA+ItL._AC_CR0%2C0%2C0%2C0_SX480_SY360_.jpg" alt="Children's Book 8"
+                                    class="max-w-[180px] max-h-[260px] object-contain hover:scale-105 hover:opacity-90 transition-all duration-300 cursor-pointer mb-4"
+                                    onclick="openModal('https://m.media-amazon.com/images/I/51E+MaVPFoL._AC_CR0%2C0%2C0%2C0_SX480_SY360_.jpg', 'Children\'s Book 8')">
+                                
+                                <!-- Book Info -->
+                                <div class="text-center">
+                                    <h4 class="tan-pearl text-lg font-bold mb-3 text-[#8A0000] ">"Mandala Coloring Book: For Grown Ups"</h4>
+                                    
+                                    <!-- Toggle Button -->
+                                    <button onclick="toggleDescription('book8')" class="mb-3 p-2 rounded-full hover:bg-gray-100 transition-colors duration-200">
+                                        <svg id="arrow-book8" class="w-6 h-6 text-[#8A0000] transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                        </svg>
+                                    </button>
+                                    
+                                    <div id="description-book8" class="hidden">
+                                        <p class="text-black mb-4 text-justify text-sm leading-relaxed">
+                                            A Beautiful 20-Page Collection for Stress Relief and Relaxation Unwind and express your creativity with this stunning Mandala Coloring Book for Grown-Ups. Featuring 62 beautifully detailed mandala designs, this coloring book is your perfect companion for quiet moments, mindfulness, and artistic escape.
+                                        </p>
+                                        <!-- Buy Button -->
+                                        <a href="https://www.amazon.com/Mandala-Coloring-Book-Grown-Ups/dp/B0FCRQCD4K?ref_=ast_author_dp&th=1&psc=1" class="inline-block bg-[#FFF287] hover:bg-[#FFE55C] text-[#3B060A] font-bold py-3 px-8 rounded-full transition-all duration-300 hover:scale-105 shadow-md hover:shadow-lg">
+                                            Buy Now
+                                        </a>
+                                    </div>
+                                </div>
+                        </div>
+
+                    <!-- Book 9 -->
+                    <div id="card-book9" class="book-card bg-gradient-to-tr from-[#C83F12] to-[#FFF287] rounded-xl overflow-hidden shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-500 p-6 flex flex-col items-center border-2 border-transparent">
+                                <!-- Book Image -->
+                                <img src="https://m.media-amazon.com/images/I/71Qd6D07hRL._AC_CR0%2C0%2C0%2C0_SX480_SY360_.jpg" alt="Children's Book 9"
+                                    class="max-w-[180px] max-h-[260px] object-contain hover:scale-105 hover:opacity-90 transition-all duration-300 cursor-pointer mb-4"
+                                    onclick="openModal('https://m.media-amazon.com/images/I/51DlY1qO+RL._AC_CR0%2C0%2C0%2C0_SX480_SY360_.jpg', 'Children\'s Book 9')">
+                                
+                                <!-- Book Info -->
+                                <div class="text-center">
+                                    <h4 class="tan-pearl text-lg font-bold mb-3 text-black ">"Adorable Animals Coloring Book"</h4>
+                                    
+                                    <!-- Toggle Button -->
+                                    <button onclick="toggleDescription('book9')" class="mb-3 p-2 rounded-full hover:bg-gray-100 transition-colors duration-200">
+                                        <svg id="arrow-book9" class="w-6 h-6 text-black transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                        </svg>
+                                    </button>
+                                    
+                                    <div id="description-book9" class="hidden">
+                                        <p class="text-black mb-4 text-justify text-sm leading-relaxed">
+                                            Description for Book 9. Add your book description here with engaging details about the story and characters.
+                                        </p>
+                                        <!-- Buy Button -->
+                                        <a href="#" class="inline-block bg-[#FFF287] hover:bg-[#FFE55C] text-[#3B060A] font-bold py-3 px-8 rounded-full transition-all duration-300 hover:scale-105 shadow-md hover:shadow-lg">
+                                            Buy Now
+                                        </a>
+                                    </div>
+                                </div>
+                        </div>
+
+                    <!-- Book 10 -->
+                    <div id="card-book10" class="book-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-500 p-6 flex flex-col items-center border-2 border-transparent">
+                                <!-- Book Image -->
+                                <img src="https://m.media-amazon.com/images/I/61-7pWqziBL._AC_CR0%2C0%2C0%2C0_SX480_SY360_.jpg" alt="Children's Book 10"
+                                    class="max-w-[180px] max-h-[260px] object-contain hover:scale-105 hover:opacity-90 transition-all duration-300 cursor-pointer mb-4"
+                                    onclick="openModal('https://m.media-amazon.com/images/I/61L+ulgiGNL._AC_CR0%2C0%2C0%2C0_SX480_SY360_.jpg', 'Children\'s Book 10')">
+                                
+                                <!-- Book Info -->
+                                <div class="text-center">
+                                    <h4 class="tan-pearl text-lg font-bold mb-3 text-[#8A0000]"">"Underwater Friends Coloring"</h4>
+                                    
+                                    <!-- Toggle Button -->
+                                    <button onclick="toggleDescription('book10')" class="mb-3 p-2 rounded-full hover:bg-gray-100 transition-colors duration-200">
+                                        <svg id="arrow-book10" class="w-6 h-6 text-[#8A0000] transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                        </svg>
+                                    </button>
+                                    
+                                    <div id="description-book10" class="hidden">
+                                        <p class="text-black mb-4 text-justify text-sm leading-relaxed">
+                                            Dive into a colorful ocean adventure made just for little learners! Underwater Friends with Fun Facts is a fun and easy coloring book for preschoolers filled with friendly sea animals like whales, jellyfish, seahorses, crabs, and more.
+                                        </p>
+                                        <!-- Buy Button -->
+                                        <a href="https://www.amazon.com/Underwater-Friends-Coloring-Facts-KiddyColor/dp/B0FCSKYXPM?ref_=ast_author_dp&th=1&psc=1" class="inline-block bg-[#FFF287] hover:bg-[#FFE55C] text-[#3B060A] font-bold py-3 px-8 rounded-full transition-all duration-300 hover:scale-105 shadow-md hover:shadow-lg">
+                                            Buy Now
+                                        </a>
+                                    </div>
+                                </div>
+                        </div>
+
+                    <!-- Book 11 -->
+                    <div id="card-book11" class="book-card bg-gradient-to-tr from-[#C83F12] to-[#FFF287] rounded-xl overflow-hidden shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-500 p-6 flex flex-col items-center border-2 border-transparent">
+                                <!-- Book Image -->
+                                <img src="https://m.media-amazon.com/images/I/71w1T2nKIvL._AC_CR0%2C0%2C0%2C0_SX480_SY360_.jpg" alt="Children's Book 11"
+                                    class="max-w-[180px] max-h-[260px] object-contain hover:scale-105 hover:opacity-90 transition-all duration-300 cursor-pointer mb-4"
+                                    onclick="openModal('https://m.media-amazon.com/images/I/21QgCLkDwXL._AC_CR0%2C0%2C0%2C0_SX480_SY360_.jpg', 'Children\'s Book 11')">
+                                
+                                <!-- Book Info -->
+                                <div class="text-center">
+                                    <h4 class="tan-pearl text-lg font-bold mb-3 text-black">"Mystic Animals Affirmations Coloring Book "</h4>
+                                    
+                                    <!-- Toggle Button -->
+                                    <button onclick="toggleDescription('book11')" class="mb-3 p-2 rounded-full hover:bg-gray-100 transition-colors duration-200">
+                                        <svg id="arrow-book11" class="w-6 h-6 text-black transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                        </svg>
+                                    </button>
+                                    
+                                    <div id="description-book11" class="hidden">
+                                        <p class="text-black mb-4 text-justify text-sm leading-relaxed">
+                                           Relax, recharge, and reconnect with your spirit through this enchanting coloring book filled with mystical animal illustrations and empowering affirmations. From moonlit owls and celestial foxes to wise wolves and sacred elephants, each page invites you to explore the magic of nature and the power of positive thought.
+                                        </p>
+                                        <!-- Buy Button -->
+                                        <a href="https://www.amazon.com/Mystic-Animals-Affirmations-Coloring-Book/dp/B0FC69F6PW?ref_=ast_author_dp&th=1&psc=1" class="inline-block bg-[#FFF287] hover:bg-[#FFE55C] text-[#3B060A] font-bold py-3 px-8 rounded-full transition-all duration-300 hover:scale-105 shadow-md hover:shadow-lg">
+                                            Buy Now
+                                        </a>
+                                    </div>
+                                </div>
+                        </div>
+    
+                </div>
+            </div>
+            
+            <!-- Horror Books -->
+            <div>
+                <!-- Enhanced Chef & Horror Books Header -->
+                <div class="text-center mb-12">
+                    <div class="inline-block relative">
+                        <h3 class="tan-pearl text-2xl md:text-2xl lg:text-5xl font-bold relative z-10">
+                            <span class="bg-gradient-to-r from-[#3B060A] via-[#8A0000] to-[#C83F12] bg-clip-text text-transparent">Chef & Horror Books</span>
+                        </h3>
+                        <div class="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-20 h-0.5 bg-gradient-to-r from-[#FFF287] to-[#C83F12] rounded-full"></div>
+                        <div class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-12 h-0.5 bg-[#FFF287]/50 rounded-full"></div>
+                    </div>
+                    <p class="text-[#3B060A]/70 text-base md:text-lg mt-4 font-medium italic">"Where culinary passion meets spine-tingling suspense"</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Book 1 -->
+                    <div class="book-card bg-gray-800 rounded-lg overflow-hidden shadow-md hover:shadow-2xl hover:shadow-[#FFF287]/30 hover:scale-105 hover:border-2 hover:border-[#FFF287] border-2 border-transparent transition-all duration-500">
+                        <img src="https://m.media-amazon.com/images/I/81aURJgOipL._AC_CR0%2C0%2C0%2C0_SX480_SY360_.jpg" alt="Horror Book 1" class="mt-12 w-full h-80 object-contain hover:scale-125 hover:opacity-90 transition-all duration-500">
+                        <div class="p-6">
+                            <h4 class="tan-pearl text-xl font-bold mb-2 text-white hover:text-[#FFF287] transition-colors duration-300 cursor-pointer">85 Vegan Recipes: You Didn't Know You Craved </h4>
+                            <p class="text-gray-300 mb-4 hover:text-white transition-colors duration-300 text-justify">85 Vegan Recipes You Didn't Know You Craved is a cookbook full of delicious and unique vegan dishes that will satisfy any palate. With 85 recipes to choose from, ranging from breakfast to dinner and desserts, this book has something. </p>
+                            <a href="https://www.amazon.com/85-Vegan-Recipes-Didnt-Craved-ebook/dp/B0CJDPYPNM?ref_=ast_author_dp&th=1&psc=1" class="inline-block bg-[#8A0000] hover:bg-[#6A0000] text-white font-bold py-2 px-6 rounded-full transition duration-300 text-center items-center">Buy Now</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Book 2 -->
+                    <div class="book-card bg-gray-800 rounded-lg overflow-hidden shadow-md hover:shadow-2xl hover:shadow-[#FFF287]/30 hover:scale-105 hover:border-2 hover:border-[#FFF287] border-2 border-transparent transition-all duration-500">
+                        <img src="https://m.media-amazon.com/images/I/81I9vhgRGbL._AC_CR0%2C0%2C0%2C0_SX480_SY360_.jpg" alt="Horror Book 1" class="mt-12 w-full h-80 object-contain hover:scale-125 hover:opacity-90 transition-all duration-500">
+                        <div class="p-6">
+                            <h4 class="tan-pearl text-xl font-bold mb-2 text-white hover:text-[#FFF287] transition-colors duration-300 cursor-pointer">Seven Sinners and the Angel Who Loved Them  </h4>
+                            <p class="text-gray-300 mb-4 hover:text-white transition-colors duration-300 text-justify">A group of friends and close associates find themselves at the center of bizarre events. An angel of death has been sent to murder them in a certain order. Casualties quickly surround the group, and one by one, each of them becomes a victim to peculiar circumstances.</p>
+                            <a href="https://www.amazon.com/Seven-Sinners-Angel-Loved-Them-ebook/dp/B0C82M19BK?ref_=ast_author_dp&th=1&psc=1" class="inline-block bg-[#8A0000] hover:bg-[#6A0000] text-white font-bold py-2 px-6 rounded-full transition duration-300 text-center items-center">Buy Now</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Book 3 -->
+                    <div class="book-card bg-gray-800 rounded-lg overflow-hidden shadow-md hover:shadow-2xl hover:shadow-[#FFF287]/30 hover:scale-105 hover:border-2 hover:border-[#FFF287] border-2 border-transparent transition-all duration-500">
+                        <img src="https://m.media-amazon.com/images/I/71MHVtOqhRL._AC_CR0%2C0%2C0%2C0_SX480_SY360_.jpg" alt="Horror Book 1" class="mt-12 w-full h-80 object-contain hover:scale-125 hover:opacity-90 transition-all duration-500">
+                        <div class="p-6">
+                            <h4 class="tan-pearl text-xl font-bold mb-2 text-white hover:text-[#FFF287] transition-colors duration-300 cursor-pointer">The Three Little Pigs and the Big Bad Hacker: A Storybook with Activities</h4>
+                            <p class="text-gray-300 mb-4 hover:text-white transition-colors duration-300 text-justify">In this fun and futuristic retelling of the beloved fairy tale, the three little pigs aren’t building straw or brick houses — they’re designing smart homes! But when a sneaky cyber villain named the Big Bad Hacker tries to break in using tricky tech tricks.</p>
+                            <a href="https://www.amazon.com/Three-Little-Pigs-Big-Hacker/dp/B0FCG115TB?ref_=ast_author_dp&th=1&psc=1" class="inline-block bg-[#8A0000] hover:bg-[#6A0000] text-white font-bold py-2 px-6 rounded-full transition duration-300 text-center items-center">Buy Now</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-20 section-gradient">
+        <div class="container mx-auto px-4">
+            <!-- Enhanced Amazon Finds Header -->
+            <div class="text-center mb-4">
+                <div class="relative inline-block">
+                    <h2 class="tan-pearl text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-[#3B060A] via-[#8A0000] to-[#C83F12] bg-clip-text text-transparent mb-4">
+                        Amazon Finds
+                    </h2>
+                    <!-- Decorative underlines -->
+                    <div class="flex justify-center space-x-2 ">
+                        <div class="h-1 w-16 bg-gradient-to-r from-[#3B060A] to-[#8A0000] rounded-full"></div>
+                        <div class="h-1 w-8 bg-gradient-to-r from-[#8A0000] to-[#C83F12] rounded-full"></div>
+                        <div class="h-1 w-16 bg-gradient-to-r from-[#C83F12] to-[#3B060A] rounded-full"></div>
+                    </div>
+                </div>
+
+            </div>
+            <p class="text-center max-w-3xl mx-auto text-lg mb-12 text-gray-700">These are my favorite products that make my life easier, more organized, and more enjoyable. As an Amazon Associate I earn from qualifying purchases.</p>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                <!-- Product 1 -->
+               <div class="product-card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl hover:shadow-gray-600/50 hover:scale-105 hover:bg-gray-50 hover:border-2 hover:border-[#C83F12] border-2 border-transparent transition-all duration-300">
+                    <img src="https://ugc.production.linktr.ee/aacabb6c-821a-42a5-8116-96df7970b28e_4188ljaB3ML.-SL500-.jpeg?io=true&size=square-fit" alt="Product 1" class="w-full h-48 object-contain p-4 hover:scale-105 transition-transform duration-300">
+                    <div class="p-6">
+                        <h4 class="tan-pearl text-lg font-bold mb-2">Shower Foot and Back Scrubber Mat</h4>
+                        <p class="text-gray-600 mb-4 text-sm">Soft Materials: Foot massagers and scrubbers are crafted from TPR, offering softness, durability, and resistance to deformation.</p>
+                        <div class="flex justify-center">
+                            <a href="https://www.amazon.com/dp/B0FDPZ6F3J?tag=15821-chefangelameans-20&linkCode=ogi&th=1&ascsubtag=srctok-87e9d28a31f29c19&btn_ref=srctok-87e9d28a31f29c19s" class="inline-block bg-[#C83F12] hover:bg-[#8A0000] text-white font-bold py-2 px-6 rounded-full text-sm transition duration-300">
+                                View on Amazon
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                 <!-- Product 2 -->
+                 <div class="product-card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl hover:shadow-gray-600/50 hover:scale-105 hover:bg-gray-50 hover:border-2 hover:border-[#C83F12] border-2 border-transparent transition-all duration-300">
+                    <img src="https://m.media-amazon.com/images/I/81T6ZS9WbOL._AC_SX679_.jpg" alt="Product 1" class="w-full h-48 object-contain p-4 hover:scale-105 transition-transform duration-300">
+                    <div class="p-6">
+                        <h4 class="tan-pearl text-lg font-bold mb-2">10PCS Set Non-Scratch Steel Wool Dishcloth</h4>
+                        <p class="text-gray-600 mb-4 text-sm">Surface-Safe Cleaning: Crafted from premium microfiber, our dishcloths are designed to clean effectively without leaving any scratches.</p>
+                        <div class="flex justify-center">
+                            <a href="https://www.amazon.com/dp/B0CMHFJCMV?tag=15821-chefangelameans-20&linkCode=ogi&th=1&ascsubtag=srctok-f6392233ca5c85a1&btn_ref=srctok-f6392233ca5c85a1" class="inline-block bg-[#C83F12] hover:bg-[#8A0000] text-white font-bold py-2 px-6 rounded-full text-sm transition duration-300">
+                                View on Amazon
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                 <div class="product-card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl hover:shadow-gray-600/50 hover:scale-105 hover:bg-gray-50 hover:border-2 hover:border-[#C83F12] border-2 border-transparent transition-all duration-300">
+                    <img src="https://m.media-amazon.com/images/I/81ouGaxW3eL._SX522_.jpg" alt="Product 1" class="w-full h-48 object-contain p-4 hover:scale-105 transition-transform duration-300">
+                    <div class="p-6">
+                        <h4 class="tan-pearl text-lg font-bold mb-2">XPRS Nutra Organic Celery Powder</h4>
+                        <p class="text-gray-600 mb-4 text-sm">Low Calorie, High Fiber: This celery powder is loaded with nutrients such as Fiber, Vitamin C, and Antioxidants like Lunularin and Bergapten.</p>
+                        <div class="flex justify-center">
+                            <a href="https://www.amazon.com/dp/B09434FXC5?tag=15821-chefangelameans-20&linkCode=ogi&th=1&ascsubtag=srctok-b608ac7dbacf5a94&btn_ref=srctok-b608ac7dbacf5a94" class="inline-block bg-[#C83F12] hover:bg-[#8A0000] text-white font-bold py-2 px-6 rounded-full text-sm transition duration-300">
+                                View on Amazon
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 4 -->
+                 <div class="product-card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl hover:shadow-gray-600/50 hover:scale-105 hover:bg-gray-50 hover:border-2 hover:border-[#C83F12] border-2 border-transparent transition-all duration-300">
+                    <img src="https://m.media-amazon.com/images/I/81nI2-knpjL._SL1500_.jpg" alt="Product 1" class="w-full h-48 object-contain p-4 hover:scale-105 transition-transform duration-300">
+                    <div class="p-6">
+                        <h4 class="tan-pearl text-lg font-bold mb-2">Jovvily Cucumber Powder - 8 oz - Real Cucumbers</h4>
+                        <p class="text-gray-600 mb-4 text-sm">Jovvily Cucumber Powder is derived from real cucumbers in a chemical-free process
+                            Cucumber Powder originated in Western Asia.</p>
+                        <div class="flex justify-center">
+                            <a href="https://www.amazon.com/dp/B0B1NY4K9J?tag=15821-chefangelameans-20&linkCode=ogi&th=1&psc=1&ascsubtag=srctok-f70d2948deadd365&btn_ref=srctok-f70d2948deadd365" class="inline-block bg-[#C83F12] hover:bg-[#8A0000] text-white font-bold py-2 px-6 rounded-full text-sm transition duration-300">
+                                View on Amazon
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="https://linktr.ee/chefangelameans" class="inline-block bg-[#3B060A] hover:bg-[#1A0305] text-white font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105 shadow-lg">View All My Amazon Finds</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <!-- Enhanced Gallery Header -->
+            <div class="text-center mb-16">
+                <div class="relative inline-block">
+                    <h2 class="tan-pearl text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-[#3B060A] via-[#8A0000] to-[#C83F12] bg-clip-text text-transparent mb-4">
+                        Gallery
+                    </h2>
+                    <!-- Decorative underlines -->
+                    <div class="flex justify-center space-x-2 mb-3">
+                        <div class="h-1 w-16 bg-gradient-to-r from-[#3B060A] to-[#8A0000] rounded-full"></div>
+                        <div class="h-1 w-8 bg-gradient-to-r from-[#8A0000] to-[#C83F12] rounded-full"></div>
+                        <div class="h-1 w-16 bg-gradient-to-r from-[#C83F12] to-[#3B060A] rounded-full"></div>
+                    </div>
+                </div>
+                <p class="text-lg text-gray-600 italic max-w-2xl mx-auto">
+                    "Capturing moments from my creative journey"
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+                <!-- Image 1 -->
+               <div class="gallery-item relative overflow-hidden rounded-lg shadow-md group">
+                    <img src="https://scontent.fmnl35-1.fna.fbcdn.net/v/t1.15752-9/514696692_1714498739430740_7613898091186007582_n.png?stp=dst-png_s480x480&_nc_cat=110&ccb=1-7&_nc_sid=0024fc&_nc_ohc=mpar2eFJ6kMQ7kNvwH_-_xL&_nc_oc=Adn7vS3RFDTtaTaC6ozZJOVjwfxCwR2O3ChxyXQ7_D2g_2dfRGB2KT5dsvcc6LntMX4&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fmnl35-1.fna&oh=03_Q7cD2wFogGP-77KToiQ2gN_epSI80PuOjWCPbXLrj-ZT0OalKw&oe=68901532" alt="Cooking" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105">
+
+                    <!-- Overlay -->
+                    <div class="absolute inset-0 bg-black bg-opacity-30 opacity-0 group-hover:opacity-100 transition duration-300"></div>
+
+                    <!-- Instagram Icon -->
+                    <div class="absolute top-3 left-3 text-white text-xl opacity-0 group-hover:opacity-100 transition duration-300">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                </div>
+                
+                <!-- Image 2 -->
+                <div class="gallery-item relative overflow-hidden rounded-lg shadow-md group">
+                    <img src="https://scontent.fmnl35-1.fna.fbcdn.net/v/t1.15752-9/513904073_1606181580049923_3811723054218658337_n.png?stp=dst-png_p480x480&_nc_cat=104&ccb=1-7&_nc_sid=0024fc&_nc_ohc=vvvEjk46axkQ7kNvwGPHOGK&_nc_oc=AdkKW3GtqLvw8DvlVnKCzmsjYMcyS9GuxPn8RJBiMowozFQyhOPlRlgXndNZUdXF0R8&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fmnl35-1.fna&oh=03_Q7cD2wHRwthPwpVwPnsscLJjcWT3iDXMkw0NWVRR5xD6o5gjdw&oe=68900D0D" alt="Cooking" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105">
+
+                    <!-- Overlay -->
+                    <div class="absolute inset-0 bg-black bg-opacity-30 opacity-0 group-hover:opacity-100 transition duration-300"></div>
+
+                    <!-- Instagram Icon -->
+                    <div class="absolute top-3 left-3 text-white text-xl opacity-0 group-hover:opacity-100 transition duration-300">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                </div>
+
+                <!-- Image 3 -->
+                <div class="gallery-item relative overflow-hidden rounded-lg shadow-md group">
+                    <img src="https://scontent.fmnl35-1.fna.fbcdn.net/v/t1.15752-9/515192890_701238342815084_8120381003033330885_n.png?_nc_cat=110&ccb=1-7&_nc_sid=0024fc&_nc_ohc=jLcp1eNiEuMQ7kNvwG3wESW&_nc_oc=AdlW38x9A-R4kdXv2pNRAkng96Kg4wtJARO_vG8J3vuAqgCiUtYrJQxsN9wd3YjNGRI&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fmnl35-1.fna&oh=03_Q7cD2wGTbE8pgk5c05Lfw97TtRPqE1IVvhSNsrm_TfzoOzciQg&oe=6890098F" alt="Cooking" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105">
+
+                    <!-- Overlay -->
+                    <div class="absolute inset-0 bg-black bg-opacity-30 opacity-0 group-hover:opacity-100 transition duration-300"></div>
+
+                    <!-- Instagram Icon -->
+                    <div class="absolute top-3 left-3 text-white text-xl opacity-0 group-hover:opacity-100 transition duration-300">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                </div>
+                
+                <!-- Image 4 -->
+               <div class="gallery-item relative overflow-hidden rounded-lg shadow-md group">
+                    <img src="https://scontent.fmnl35-1.fna.fbcdn.net/v/t1.15752-9/513904073_1762390994350795_365989766689155307_n.png?stp=dst-png_s480x480&_nc_cat=102&ccb=1-7&_nc_sid=0024fc&_nc_ohc=6zPjQQkpIEIQ7kNvwH3fOsd&_nc_oc=Adl6Hkq0BMSJU13nHKxlQN7nYj2Qf8wTSl8i6nhxNqV-xOwSog8NlcSynrRMvqlv750&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fmnl35-1.fna&oh=03_Q7cD2wF3gchkHyqWt3CNKdWXFMHKjPxvSK8i49VQnE9uHQLGfQ&oe=689012EB" alt="Cooking" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105">
+
+                    <!-- Overlay -->
+                    <div class="absolute inset-0 bg-black bg-opacity-30 opacity-0 group-hover:opacity-100 transition duration-300"></div>
+
+                    <!-- Instagram Icon -->
+                    <div class="absolute top-3 left-3 text-white text-xl opacity-0 group-hover:opacity-100 transition duration-300">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                </div>
+                
+                
+                <!-- Image 5 -->
+               <div class="gallery-item relative overflow-hidden rounded-lg shadow-md group">
+                    <img src="https://scontent.fmnl35-1.fna.fbcdn.net/v/t1.15752-9/514520135_1251617523000292_1659637379791612202_n.png?stp=dst-png_p480x480&_nc_cat=104&ccb=1-7&_nc_sid=0024fc&_nc_aid=0&_nc_ohc=1Hd7Yn8Anl4Q7kNvwGOYfsr&_nc_oc=AdngzS2hqyUqV2DTeKg9_umZOtoIs_nagx3keMkJS_dKpyk2O2JEWJpKoXjNErIJOOg&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fmnl35-1.fna&oh=03_Q7cD2wGfqYKdIxFUmJ2dOeG-nD-GPbknGS3UZGUrh27svklNsA&oe=689034C3" alt="Cooking" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105">
+
+                    <!-- Overlay -->
+                    <div class="absolute inset-0 bg-black bg-opacity-30 opacity-0 group-hover:opacity-100 transition duration-300"></div>
+
+                    <!-- Instagram Icon -->
+                    <div class="absolute top-3 left-3 text-white text-xl opacity-0 group-hover:opacity-100 transition duration-300">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                </div>
+
+                <!-- Image 6 -->
+               <div class="gallery-item relative overflow-hidden rounded-lg shadow-md group">
+                    <img src="https://scontent.fmnl35-1.fna.fbcdn.net/v/t1.15752-9/513916004_739630375220173_3345610309668197350_n.png?stp=dst-png_s480x480&_nc_cat=110&ccb=1-7&_nc_sid=0024fc&_nc_ohc=L9Qe8LPzIo0Q7kNvwFCwUyt&_nc_oc=Adkp37DODgDmZFX3v5E3Es7v0QqfgExLaizTUUBUhNVxR0iuAk928fzbaWEMXo7RNgE&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fmnl35-1.fna&oh=03_Q7cD2wEg2cNeIyeRI2ZyctQ4IzQE8GH_--0bJD6ZCcBaOLrW8Q&oe=6890271D" alt="Cooking" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105">
+
+                    <!-- Overlay -->
+                    <div class="absolute inset-0 bg-black bg-opacity-30 opacity-0 group-hover:opacity-100 transition duration-300"></div>
+
+                    <!-- Instagram Icon -->
+                    <div class="absolute top-3 left-3 text-white text-xl opacity-0 group-hover:opacity-100 transition duration-300">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 gradient-bg text-white">
+        <div class="container mx-auto px-4">
+            <h2 class="tan-pearl text-3xl md:text-4xl lg:text-5xl text-center mb-16">"What People Say"</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card group bg-[#8A0000] hover:bg-[#a30000] rounded-lg p-8 transition-all duration-300 hover:scale-105">
+                    <div class="flex items-center mb-4 transition-transform duration-300 group-hover:scale-110">
+                       
+                            <div class="w-16 h-16 rounded-full bg-gray-300 flex items-center justify-center text-white text-2xl">
+                                <i class="fas fa-user"></i>
+                            </div>
+                        
+                        <div>
+                            <h4 class="ml-2 tan-pearl text-lg font-bold text-white transition-transform duration-300">Peggy</h4>
+                           <p class="ml-2 text-sm text-[#FFF287] transition-transform duration-300 flex space-x-1">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                           </p>
+                        </div>
+                    </div>
+                    <p class="text-justify italic text-white transition-transform duration-300 group-hover:scale-105">
+                        "This book was so good! It was the best book I have read in a long time. I love all the surprising twists. It had me sucked in until the end! I highly recommend this book!"
+                    </p>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card group bg-[#8A0000] hover:bg-[#a30000] rounded-lg p-8 transition-all duration-300 hover:scale-105">
+                    <div class="flex items-center mb-4 transition-transform duration-300 group-hover:scale-110">
+                       
+                            <div class="w-16 h-16 rounded-full bg-gray-300 flex items-center justify-center text-white text-2xl">
+                                <i class="fas fa-user"></i>
+                            </div>
+                        
+                        <div>
+                            <h4 class="ml-2 tan-pearl text-lg font-bold text-white transition-transform duration-300">City-County Library</h4>
+                           <p class="ml-2 text-sm text-[#FFF287] transition-transform duration-300 flex space-x-1">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                           </p>
+                        </div>
+                    </div>
+                    <p class="text-justify italic text-white transition-transform duration-300 group-hover:scale-105">
+                        "This book is so popular at our library! Everyone that reads it loves it! This book is a must read! We can't wait for book #2!"
+                    </p>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card group bg-[#8A0000] hover:bg-[#a30000] rounded-lg p-8 transition-all duration-300 hover:scale-105">
+                    <div class="flex items-center mb-4 transition-transform duration-300 group-hover:scale-110">
+                       
+                            <div class="w-16 h-16 rounded-full bg-gray-300 flex items-center justify-center text-white text-2xl">
+                                <i class="fas fa-user"></i>
+                            </div>
+                        
+                        <div>
+                            <h4 class="ml-2 tan-pearl text-lg font-bold text-white transition-transform duration-300">Tony Cobain</h4>
+                           <p class="ml-2 text-sm text-[#FFF287] transition-transform duration-300 flex space-x-1">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                           </p>
+                        </div>
+                    </div>
+                    <p class="text-justify italic text-white transition-transform duration-300 group-hover:scale-105">
+                        "Amazing book with fantastic recipes. If you are vegan or want to try vegan dishes, this is the recipe book you need!"
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <!-- Enhanced Let's Connect Header -->
+            <div class="text-center mb-2">
+                <div class="relative inline-block">
+                    <h2 class="tan-pearl text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-[#3B060A] via-[#8A0000] to-[#C83F12] bg-clip-text text-transparent mb-4">
+                        Let's Connect
+                    </h2>
+                    <!-- Decorative underlines -->
+                    <div class="flex justify-center space-x-2 mb-3">
+                        <div class="h-1 w-16 bg-gradient-to-r from-[#3B060A] to-[#8A0000] rounded-full"></div>
+                        <div class="h-1 w-8 bg-gradient-to-r from-[#8A0000] to-[#C83F12] rounded-full"></div>
+                        <div class="h-1 w-16 bg-gradient-to-r from-[#C83F12] to-[#3B060A] rounded-full"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="max-w-lg mx-auto text-center">
+                <p class="text-lg mb-8 text-gray-700">Follow me on social media for updates on my latest projects, recipes, and more!</p>
+                
+                <!-- Enhanced Social Media Buttons -->
+                <div class="flex justify-center gap-8">
+                    <a href="https://www.instagram.com/chefangelameans/" class="group relative">
+                        <div class="relative bg-gradient-to-br from-[#E4405F] via-[#F56040] to-[#C13584] p-5 rounded-2xl shadow-2xl hover:shadow-[#E4405F]/30 transform hover:scale-110 hover:rotate-3 transition-all duration-500 border-2 border-white/20">
+                            <i class="fab fa-instagram text-3xl text-white drop-shadow-lg"></i>
+                            <div class="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        </div>
+                        <span class="absolute -bottom-10 left-1/2 transform -translate-x-1/2 text-sm font-semibold text-gray-700 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-white px-3 py-1 rounded-full shadow-md">Instagram</span>
+                    </a>
+                    <a href="https://www.amazon.com/stores/author/B0DQGH7WZQ" class="group relative">
+                        <div class="relative bg-gradient-to-br from-[#FF9900] via-[#FF7700] to-[#FF6600] p-5 rounded-2xl shadow-2xl hover:shadow-[#FF9900]/30 transform hover:scale-110 hover:-rotate-3 transition-all duration-500 border-2 border-white/20">
+                            <i class="fab fa-amazon text-3xl text-white drop-shadow-lg"></i>
+                            <div class="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        </div>
+                        <span class="absolute -bottom-10 left-1/2 transform -translate-x-1/2 text-sm font-semibold text-gray-700 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-white px-3 py-1 rounded-full shadow-md">Amazon</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="gradient-bg text-white py-8">
+        <div class="container mx-auto px-4">
+             <div class="mb-4 md:mb-0 text-center">
+                    <p class="tan-pearl text-xl">chefcngelameans</p>
+                </div>
+            <div class="text-sm text-center">
+                    <p>© 2025 Chef Angela Means. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal for Image Popup -->
+    <div id="imageModal" class="modal">
+        <span class="modal-close" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+            <img id="modalImage" class="modal-image" src="" alt="">
+        </div>
+    </div>
+
+    <script>
+        // Modal functions
+        function openModal(imageSrc, imageAlt) {
+            const modal = document.getElementById('imageModal');
+            const modalImage = document.getElementById('modalImage');
+            
+            modalImage.src = imageSrc;
+            modalImage.alt = imageAlt;
+            modal.style.display = 'flex';
+            
+            // Prevent body scroll when modal is open
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeModal() {
+            const modal = document.getElementById('imageModal');
+            modal.style.display = 'none';
+            
+            // Restore body scroll
+            document.body.style.overflow = 'auto';
+        }
+        
+        // Close modal when clicking outside the image
+        document.getElementById('imageModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeModal();
+            }
+        });
+        
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeModal();
+            }
+        });
+
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                
+                // Close mobile menu if open
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+
+        // Add shadow to navbar on scroll
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-xl');
+            } else {
+                nav.classList.remove('shadow-xl');
+            }
+        });
+
+        // Simple animation for elements when they come into view
+        const animateOnScroll = function() {
+            const elements = document.querySelectorAll('.book-card, .product-card, .testimonial-card, .gallery-item');
+            
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.2;
+                
+                if (elementPosition < screenPosition) {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }
+            });
+        };
+
+        // Set initial state for animated elements
+        document.querySelectorAll('.book-card, .product-card, .testimonial-card, .gallery-item').forEach(element => {
+            element.style.opacity = '0';
+            element.style.transform = 'translateY(20px)';
+            element.style.transition = 'all 0.6s ease';
+        });
+
+        // Run animation check on load and scroll
+        window.addEventListener('load', animateOnScroll);
+        window.addEventListener('scroll', animateOnScroll);
+
+        // Toggle description function for book cards
+        function toggleDescription(bookId) {
+            const description = document.getElementById('description-' + bookId);
+            const arrow = document.getElementById('arrow-' + bookId);
+            const card = document.getElementById('card-' + bookId);
+            
+            if (description.classList.contains('hidden')) {
+                description.classList.remove('hidden');
+                arrow.style.transform = 'rotate(180deg)';
+                // Change border when description is shown
+                card.classList.remove('border-2', 'border-transparent');
+                card.classList.add('border-4', 'border-[#8A0000]');
+            } else {
+                description.classList.add('hidden');
+                arrow.style.transform = 'rotate(0deg)';
+                // Reset border when description is hidden
+                card.classList.remove('border-4', 'border-[#8A0000]');
+                card.classList.add('border-2', 'border-transparent');
+            }
+        }
+    </script>
+</body>
+</html>
